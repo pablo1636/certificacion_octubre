@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25/10/2018 20:20:06 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Curso" table="curso" catalog="centro_cultural" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="60" not-null="true" />
+        </property>
+        <property name="profesor" type="string">
+            <column name="profesor" length="50" not-null="true" />
+        </property>
+        <property name="cargaHoraria" type="java.lang.Integer">
+            <column name="cargaHoraria" />
+        </property>
+        <property name="cupo" type="java.lang.Integer">
+            <column name="cupo" />
+        </property>
+        <property name="aula" type="java.lang.Integer">
+            <column name="aula" />
+        </property>
+        <property name="duracion" type="java.lang.Integer">
+            <column name="duracion" />
+        </property>
+        <property name="idTematica" type="int">
+            <column name="id_tematica" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

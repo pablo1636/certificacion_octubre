@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/10/2018 04:05:12 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Participante" table="participante" catalog="centro_cultural" optimistic-lock="version">
+        <id name="email" type="string">
+            <column name="email" length="80" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="50" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="100" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="40" />
+        </property>
+        <property name="fechaNacimiento" type="date">
+            <column name="fechaNacimiento" length="10" />
+        </property>
+        <property name="nombreTutor" type="string">
+            <column name="nombreTutor" length="80" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
